@@ -48,3 +48,33 @@
   background-color: rgb(91, 190, 194);
   color: #fff;
 }
+
+
+.heading {
+  line-height: normal;
+  text-align: center;
+  font-size: 27px;
+  font: normal normal normal 27px/1.4em brandon-grot-w01-light,brandon-grot-w05-light,sans-serif;
+  letter-spacing: 1.25em;
+  color:rgb(47, 46, 46);
+}
+
+.navbar {
+  width: 120px;
+  height: 225px;
+  justify-self: start;
+  align-self: start;
+  margin-top: 69px;
+  left: 20px;
+  position: absolute;
+  grid-area: 1 / 1 / 2 / 2;
+  pointer-events: auto;
+}
+
+.nav_ul {
+  list-style: none;
+}
+
+li {
+  display:flex;
+}
