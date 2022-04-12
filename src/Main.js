@@ -35,8 +35,9 @@ export default function Main() {
 
     return(
         <>
-        <div>
-            <LazyHero imageSrc="https://unsplash.it/2000/1000">
+        
+        <section className="hero">
+            <div className="hero-inner">
                 <h1 className="heading">Mina & Juan Pablo</h1>
                 <nav className="navbar">
                     <ul className="nav_ul">
@@ -45,12 +46,14 @@ export default function Main() {
                         <li>RSVP</li>
                     </ul>
                 </nav> 
-            </LazyHero>           
-        </div>
-        <div id="our_story">
+                </div>
+        </section>         
+        <section id="our_story">
+        <div id="our_story_inner">
             <h1>Vi ska gifta oss jaow</h1>
             Vi träffades i Barcelona hösten 2012. Juan-Pablo friade i Barcelona sensommaren 2021. Vi gifter oss (utanför) Barcelona våren 2023. Hoppas att ni vill komma och fira med oss!
         </div>
+        </section>
 
         <Carousel
             data={images}
@@ -77,6 +80,10 @@ export default function Main() {
               margin: "40px auto",
             }}
       />
+
+        <section id="details">
+            
+        </section>
 
         </>
 

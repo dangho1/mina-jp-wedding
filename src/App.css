@@ -78,3 +78,29 @@
 li {
   display:flex;
 }
+.hero {
+  /* Sizing */
+  width: 100vw;
+  height: 100vh;
+  
+  /* Flexbox stuff */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Text styles */
+  text-align: center;
+  color: white;
+  
+  /* Background styles */
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5), url('hero.jpg'));*/
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#our_story {
+  background-color: rgb(247,233,232);
+}
