@@ -96,7 +96,14 @@ export default function Main() {
                 <p class="wedding_info_text">Samtliga gäster transporteras med buss från Hotel YY. Avgång 14.00.</p>
             </div>
             </div>
+        </section>
 
+        <section id="register">
+
+            <div id="btn_container">
+          <h2 class="button_heading" id="wedding_text">Mina och Juan-Pablos bröllop</h2> 
+            <button id="btn">Register Now</button>
+        </div>
         </section>
 
         </>
