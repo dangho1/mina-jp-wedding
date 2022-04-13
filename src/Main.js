@@ -82,6 +82,7 @@ export default function Main() {
         <section id="details">
             <h5 className="wedding_text">BRÖLLOPET</h5>
 
+            <div id="wedding_info_container">
             <div id="wedding_info_upper">
                 <h2 class="wedding_info_text" id="when">När</h2>
                 <p class="wedding_info_text">Lördag 20 maj 2023</p>
@@ -93,6 +94,7 @@ export default function Main() {
                 <p class="wedding_info_text">Can Tarranc</p>
                 <p class="wedding_info_text">Tordera, Katalonien</p>
                 <p class="wedding_info_text">Samtliga gäster transporteras med buss från Hotel YY. Avgång 14.00.</p>
+            </div>
             </div>
 
         </section>
