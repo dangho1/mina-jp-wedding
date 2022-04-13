@@ -42,7 +42,7 @@ export default function Main() {
                 <nav className="navbar">
                     <ul className="nav_ul">
                         <li><a href="#our_story">Our Story</a></li>
-                        <li>Details</li>
+                        <li><a href="#details">Details</a></li>
                         <li>RSVP</li>
                     </ul>
                 </nav> 
@@ -53,8 +53,8 @@ export default function Main() {
             <h1>Vi ska gifta oss jaow</h1>
             Vi träffades i Barcelona hösten 2012. Juan-Pablo friade i Barcelona sensommaren 2021. Vi gifter oss (utanför) Barcelona våren 2023. Hoppas att ni vill komma och fira med oss!
         </div>
+        
         </section>
-
         <Carousel
             data={images}
             time={2000}
@@ -71,18 +71,30 @@ export default function Main() {
             pauseIconSize="40px"
             slideBackgroundColor="darkgrey"
             slideImageFit="cover"
-            thumbnails={true}
+            thumbnails={false}
             thumbnailWidth="100px"
             style={{
               textAlign: "center",
               maxWidth: "100%",
               maxHeight: "500px",
-              margin: "40px auto",
             }}
       />
-
         <section id="details">
-            
+            <h5 className="wedding_text">BRÖLLOPET</h5>
+
+            <div id="wedding_info_upper">
+                <h2 class="wedding_info_text" id="when">När</h2>
+                <p class="wedding_info_text">Lördag 20 maj 2023</p>
+                <p class="wedding_info_text">Vigseln startar 15:00</p>
+                <p class="wedding_info_text">Därefter följer aperitivo och fest</p>
+            </div>
+            <div id="wedding_info_middle">
+                <h2 class="wedding_info_text" id="where">Vart</h2>
+                <p class="wedding_info_text">Can Tarranc</p>
+                <p class="wedding_info_text">Tordera, Katalonien</p>
+                <p class="wedding_info_text">Samtliga gäster transporteras med buss från Hotel YY. Avgång 14.00.</p>
+            </div>
+
         </section>
 
         </>
