@@ -1,11 +1,30 @@
 *{
   padding: 0;
   margin: 0;
+
+  
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /*
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;*/
 }
 
 .App {
   text-align: center;
 
+}
+
+nav {
+  top: 2%;
+  position: absolute !important;
+  
 }
 
 .App-logo {
@@ -49,7 +68,7 @@
   display: flex;
   justify-content: center;
   align-items: baseline;
-  padding: 1em;
+  /*padding: 1em; */
   margin-bottom: 2em;
   background-color: rgb(91, 190, 194);
   color: #fff;
@@ -63,18 +82,6 @@
   font: normal normal normal 27px/1.4em brandon-grot-w01-light,brandon-grot-w05-light,sans-serif;
   letter-spacing: 1.25em;
   color:rgb(47, 46, 46);
-}
-
-.navbar {
-  width: 120px;
-  height: 225px;
-  justify-self: start;
-  align-self: start;
-  margin-top: 69px;
-  left: 20px;
-  position: absolute;
-  grid-area: 1 / 1 / 2 / 2;
-  pointer-events: auto;
 }
 
 .nav_ul {
@@ -122,9 +129,9 @@ li {
 }
 .wedding_text {
   font-size: 27px;
-  letter-spacing: 1.6em;
-  left: 5em;
-  position: absolute;
+  letter-spacing: 20px;
+  left: 10px;
+  position: relative;
   margin-top: 3em;
   color: rgb(47,46,46);
   font-family: brandon-grot-w01-light,sans-serif;;
@@ -138,29 +145,9 @@ li {
   position: absolute;
 }
 
-#wedding_info_upper {
-  position: relative;
-    margin: 0px 0px 10px calc((100% - 980px) * 0.5);
-    left: 565px;
-    grid-area: 2 / 1 / 3 / 2;
-    justify-self: start;
-    align-self: start;
-    width: 414px;
-    margin-bottom: 6em;
-    margin-top: 3em;
-}
 
-#wedding_info_middle {
-  position: relative;
-    margin: 0px 0px 30px calc((100% - 980px) * 0.5);
-    left: 565px;
-    grid-area: 6 / 1 / 7 / 2;
-    justify-self: start;
-    align-self: start;
-    width: 317px;
-    
-  
-}
+
+
 
 .wedding_info_text {
   font-size: 20px;
