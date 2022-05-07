@@ -35,7 +35,7 @@ export default function Main() {
       <section className="hero">
         <div className="hero-inner">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand" href="/">
+          <a class="navbar-brand" href="#">
             
           </a>
           <button
@@ -60,9 +60,7 @@ export default function Main() {
               <a class="nav-item nav-link" href="#">
                 Details
               </a>
-              <a class="nav-item nav-link disabled" href="#">
-                Disabled
-              </a>
+    
             </div>
           </div>
         </nav>
