@@ -1,16 +1,7 @@
-import { useEffect, useState } from "react";
-import Navbar from "./Navbar/Index";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { Link } from 'react-router-dom'
-import Information from "./Navbar/Information";
-import Register from "./Navbar/Register";
-import LazyHero from "react-lazy-hero";
-import ImageGallery from "react-image-gallery";
-import { Carousel } from "react-carousel-minimal";
-import RSVP from "./RSVP";
-import { useNavigate } from "react-router-dom";
-import { useHistory } from 'react-router-dom';
 
+import { Link } from 'react-router-dom'
+
+import { Carousel } from "react-carousel-minimal";
 
 export default function Main() {
   
