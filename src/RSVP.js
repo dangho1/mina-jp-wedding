@@ -62,7 +62,7 @@ function RSVP() {
   return (
     <>
       <section className="hero">
-        <div className="hero-inner">
+        
           <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#"></a>
             <button
@@ -95,7 +95,6 @@ function RSVP() {
           </nav>
           <div className="header-content">
             <h1 className="heading">Mina & Juan Pablo</h1>
-          </div>
         </div>
       </section>
       <form>
