@@ -86,6 +86,7 @@ function RSVP() {
   }
   return (
     <>
+    <div className="RSVP-page">
       <section className="hero">
         <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="#"></a>
@@ -112,7 +113,7 @@ function RSVP() {
                 Details
               </a>
               <a class="nav-item nav-link" href="#">
-                RSVP
+                OSA
               </a>
             </div>
           </div>
@@ -121,6 +122,7 @@ function RSVP() {
           <h1 className="heading">Mina & Juan Pablo</h1>
         </div>
       </section>
+      <section className="form-section">
       <form className="form">
         <div class="form-group">
           <label for="firstname">Förnamn</label>
@@ -274,6 +276,8 @@ function RSVP() {
           Anmäl
         </button>
       </form>
+      </section>
+      </div>
     </>
   );
 }
