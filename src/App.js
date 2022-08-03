@@ -7,6 +7,7 @@ import {
     Route
   } from "react-router-dom";
 import RSVP from "./RSVP";
+import Schedule from './Schedule';
 
 
 function App() {
@@ -14,8 +15,8 @@ function App() {
     <div className="app">
         <Routes>
             <Route exact path="/" element={<Main />}/>
-
-            <Route exact path="/rsvp" element={<RSVP />}/>
+            <Route exact path="/osa" element={<RSVP />}/>
+            <Route exact path="/schedule" element={<Schedule />}/>
         </Routes>
     </div>
 )

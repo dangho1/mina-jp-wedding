@@ -23,6 +23,7 @@ html, body {
 
 nav {
   top: 2%;
+  left: 2%;
   position: absolute !important;
   font-weight: bold;
   
@@ -115,7 +116,8 @@ nav {
   font-size: 20px;
   line-height: 2em;
   display: flex;
-  font: normal normal normal 20px/1.4em didot-w01-italic,didot-w05-italic,serif;
+  /*font: normal normal normal 20px/1.4em didot-w01-italic,didot-w05-italic,serif; */
+  font-family: "didot", "serif";
   color: rgb(47,46,46);
 
 
@@ -128,7 +130,7 @@ nav {
 
 
 #details {
-  height: 41em;
+  height: 44em;
   background: rgb(211, 206, 206);
 }
 .wedding_text {
@@ -185,7 +187,7 @@ nav {
 
 #register {
 background-color: rgb(247,233,232);
-height: 20em;
+height: 26em;
 }
 
 #btn_container {
@@ -228,3 +230,13 @@ height: 20em;
   transform: translate(-50%);
   padding-bottom: 100px;
 }
+
+.form > * {
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.form-check-label {
+  margin-top: 5px !important;
+}
+

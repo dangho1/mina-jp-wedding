@@ -9,6 +9,11 @@ function RSVP() {
   const [firstName, setFirstName] = useState("");
   const [surName, setSurName] = useState("");
   const [email, setEmail] = useState("");
+  const [song, setSong] = useState("");
+  const [allergies, setAllergies] = useState("");
+  const [needAccomodation, setNeedAccomodation] = useState("");
+  const [needTransportWeddingDay, setNeedTransportWeddingDay] = useState("");
+  const [needTransportPoolParty, setNeedTransportPoolParty] = useState("");
   const [passCode, setPassCode] = useState("");
 
   function checkRSVP(e) {
@@ -35,6 +40,21 @@ function RSVP() {
       return;
     }
 
+    if(needAccomodation == "") {
+      alert("Fyll i om du vill ha boende mellan 20-21 maj")
+      return;
+    }
+
+    if(needTransportWeddingDay == "") {
+      alert("Fyll i om du vill ha transport på bröllopsdagen");
+      return;
+    }
+
+    if(needTransportPoolParty == "") {
+      alert("Fyll i om du vill ha transport till och från poolpartyt");
+      return;
+    }
+
     submitRSVP();
   }
 
@@ -56,48 +76,52 @@ function RSVP() {
       Förnamn: firstName,
       Efternamn: surName,
       email: email,
+      song: song,
+      allergies: allergies,
+      needAccomodation: needAccomodation,
+      needTransportWeddingDay: needTransportWeddingDay,
+      needTransportPoolParty: needTransportPoolParty
     });
     alert("Tack! Din anmälan är registrerad :)");
   }
   return (
     <>
       <section className="hero">
-        
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#"></a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-item nav-link" href="/">
-                  Home <span class="sr-only"></span>
-                </a>
-                <a class="nav-item nav-link" href="/#our_story">
-                  Our Story
-                </a>
-                <a class="nav-item nav-link" href="/#details">
-                  Details
-                </a>
-                <a class="nav-item nav-link" href="#">
-                  RSVP
-                </a>
-              </div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#"></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="/">
+                Home <span class="sr-only"></span>
+              </a>
+              <a class="nav-item nav-link" href="/#our_story">
+                Our Story
+              </a>
+              <a class="nav-item nav-link" href="/#details">
+                Details
+              </a>
+              <a class="nav-item nav-link" href="#">
+                RSVP
+              </a>
             </div>
-          </nav>
-          <div className="header-content">
-            <h1 className="heading">Mina & Juan Pablo</h1>
+          </div>
+        </nav>
+        <div className="header-content">
+          <h1 className="heading">Mina & Juan Pablo</h1>
         </div>
       </section>
-      <form>
+      <form className="form">
         <div class="form-group">
           <label for="firstname">Förnamn</label>
           <input
@@ -111,7 +135,7 @@ function RSVP() {
           />
         </div>
         <div class="form-group">
-          <label for="surname">efternamn</label>
+          <label for="surname">Efternamn</label>
           <input
             required="required"
             type="text"
@@ -134,6 +158,105 @@ function RSVP() {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
+        <div class="form-group">
+          <label for="song">Låt du vill höra på dansgolvet</label>
+          <input
+            type="text"
+            class="form-control"
+            id="song"
+            placeholder="Dancing Queen"
+            value={song}
+            onChange={(e) => setSong(e.target.value)}
+          />
+        </div>
+        <div class="form-group">
+          <label for="allergies">Kostpreferenser eller allergier</label>
+          <input
+            type="text"
+            class="form-control"
+            id="allergies"
+            value={allergies}
+            onChange={(e) => setAllergies(e.target.value)}
+          />
+        </div>
+        <label>Jag önskar boende 20-21 maj</label>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+            onChange={(e) => setNeedAccomodation("Yes")}
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            Ja
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            onChange={(e) => setNeedAccomodation("No")}
+          />
+          <label class="form-check-label" for="flexRadioDefault2">
+            Nej
+          </label>
+        </div>
+
+        <label>Jag önskar transport till och från festlokalen på bröllopsdagen</label>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+            onChange={(e) => setNeedTransportWeddingDay("Yes")}
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            Ja
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            onChange={(e) => setNeedTransportWeddingDay("No")}
+          />
+          <label class="form-check-label" for="flexRadioDefault2">
+            Nej
+          </label>
+        </div>
+
+        <label>Jag önskar transport till och från festlokalen för poolpartyt dagen efter bröllopet</label>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+            onChange={(e) => setNeedTransportPoolParty("Yes")}
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            Ja
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            onChange={(e) => setNeedTransportPoolParty("No")}
+          />
+          <label class="form-check-label" for="flexRadioDefault2">
+            Nej
+          </label>
+        </div>
+      
         <div class="form-group">
           <label for="exampleInputPassword1">Kod</label>
           <input
