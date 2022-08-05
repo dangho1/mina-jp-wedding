@@ -242,12 +242,19 @@ nav {
   max-width: 500px;
 }
 
+.flex-column{
+  max-width: 500px !important; 
+}
+
 @media screen and (max-width: 768px) {
   .our_story_text {
     max-width: 300px;
   }
-}
 
+  .flex-column{
+    max-width: 300px !important; 
+  }
+}
 
 .form > * {
   margin-left: 20px;
