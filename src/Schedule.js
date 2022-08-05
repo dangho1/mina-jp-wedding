@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import schedule from './assets/schedule.jpg'
 
 function Schedule() {
   return (
@@ -69,6 +70,10 @@ function Schedule() {
         </div>
         
       </section>
+
+      <img src={schedule} className="img-fluid"/>
+
+
     </>
   );
 }

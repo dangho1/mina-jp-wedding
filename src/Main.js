@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import { Carousel } from "react-carousel-minimal";
-import our_story from './assets/our_story.jpg';
+import our_story from "./assets/our_story.jpg";
+import brollopet from "./assets/brollopet.jpg";
+import dresscode from "./assets/dresscode.jpg";
+import flight from "./assets/flight.jpg";
+import otherinfo from "./assets/otherinfo.jpg";
+import rsvp from "./assets/rsvp.jpg";
+import schedule from "./assets/schedule.jpg";
 
 export default function Main() {
-
   return (
     <>
       <section className="hero">
@@ -45,8 +50,11 @@ export default function Main() {
         </div>
       </section>
       <section id="our_story">
-        <div id="our_story_inner">
-          <h1 id="our_story_header">Vi ska gifta oss!</h1>
+        <h1 id="our_story_header">Vi ska gifta oss!</h1>
+        <div
+          className="h-100 w-100 d-flex align-items-center justify-content-center"
+          id="our_story_inner"
+        >
           <div className="our_story_text">
             Vi träffades i Barcelona hösten 2012. Juan-Pablo friade i Barcelona
             sensommaren 2021. Vi gifter oss (utanför) Barcelona våren 2023.
@@ -55,70 +63,184 @@ export default function Main() {
         </div>
       </section>
 
-      <img src={our_story} className="full_width_img"/>
+      <img src={our_story} className="img-fluid" />
 
       <section id="details">
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              <h5 className="wedding_text">BRÖLLOPET</h5>
+        <h1 id="our_story_header">Bröllopet</h1>
+        <div
+          className="h-100 w-100 d-flex align-items-center justify-content-center"
+          id="our_story_inner"
+        >
+          <div className="d-flex flex-column">
+            <div className="p-2" id="flight_text">
+              <h3 className="dresscode_header">När</h3>
+              Lördag 20 maj 2023
+ <br></br>
+              
+Vigseln börjar kl. 16:00. <br></br>
+Därefter följer aperitivo, bröllopsmiddag och fest (FEST!) 
+
             </div>
-            <div className="col">
-              <div id="wedding_info_upper">
-                <h2 class="wedding_info_text" id="when">
-                  När
-                </h2>
-                <p class="wedding_info_text">Lördag 20 maj 2023</p>
-                <p class="wedding_info_text">Vigseln startar 15:00</p>
-                <p class="wedding_info_text">
-                  Därefter följer aperitivo och fest
-                </p>
-                <div id="wedding_info_middle">
-                  <h2 class="wedding_info_text" id="where">
-                    Vart
-                  </h2>
-                  <p class="wedding_info_text">Can Tarranc</p>
-                  <p class="wedding_info_text">Tordera, Katalonien</p>
-                  <p class="wedding_info_text">
-                    Samtliga gäster transporteras med buss från Hotel YY. Avgång
-                    14.00.
-                  </p>
-                </div>
-              </div>
+
+            <div className="p-2" id="flight_text">
+              <h3 className="dresscode_header">Var</h3>
+              Can Tarranc <br></br>
+Tordera, Katalonien <br></br>
+Samtliga gäster transporteras med buss från Hotel YY. 
+
+            </div>
+            <div className="p-2" id="flight_text">
+              <h3 className="dresscode_header">
+                Kvällen innan
+              </h3>
+              För att fira in helgen och hälsa er alla välkomna bjuder vi in till en välkomstcocktail med drinkar och tapas på terrassen på Hotel YY fredagen den 19 maj, med start kl. 19.00. 
+            </div>
+            <div className="p-2" id="flight_text">
+              <h3 className="dresscode_header">
+                Dagen efter
+              </h3>
+              Vi tycker att första dagen som gifta är värd att fira och hoppas att ni vill fira den med oss! Dagen efter bröllopet (söndag 21 maj) bjuder vi därför in till ett poolparty med grillbuffé på Can Tarranc. Festen pågår mellan kl. 12-16. Transport till festen avgår från Hotel YY. <br></br> <br></br>
+              För mer information och specifika tider gällande transport, vänligen se <a href='/schedule'>schemat</a>
+
             </div>
           </div>
-          <div className="row">
-            <div className="col">
-                <Link to="/schedule">
-                  <button type="button" id="btn" className="schedule_btn">
-                    Schema
-                  </button>
-                </Link>
-            </div>
-          </div>
+
+          
         </div>
       </section>
+      
+      <img src={brollopet} className="img-fluid" />
+
       <section id="flight_info">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              Flyg och boende...
+        <h1 id="our_story_header">Flyg och Boende</h1>
+        <div
+          className="h-100 w-100 d-flex align-items-center justify-content-center"
+          id="our_story_inner"
+        >
+          <div className="our_story_text" id="flight_text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            auctor elit ut felis gravida, quis iaculis eros efficitur. Nam
+            feugiat eget eros sit amet laoreet. Nunc auctor, justo ac eleifend
+            aliquet, velit libero semper nibh, eget pellentesque lacus lectus
+            posuere orci. Curabitur nibh quam, scelerisque id dapibus id, mollis
+            vel tellus. Aliquam mauris lectus, interdum ut vehicula non,
+            placerat quis lectus. Duis ut metus mattis, blandit tortor rhoncus,
+            mollis mi. Nullam ultricies libero non quam pulvinar pharetra. Proin
+            turpis odio, laoreet a dapibus at, facilisis porta justo. Donec
+            faucibus aliquet urna ut ultricies. Nulla facilisi.
+          </div>
+        </div>
+      </section>
+
+      <img src={flight} className="img-fluid" />
+
+      <section id="dresscodes">
+        <h1 id="our_story_header">Klädkoder</h1>
+        <div
+          className="h-100 w-100 d-flex align-items-center justify-content-center"
+          id="our_story_inner"
+        >
+          <div className="d-flex flex-column">
+            <div className="p-2" id="flight_text">
+              <h3 className="dresscode_header">19 maj (välkomstcocktail):</h3>
+              Udda kavaj <br></br>
+              Inspiration för den som önskar finns här: https://pin.it/4Gg6r3G
+            </div>
+
+            <div className="p-2" id="flight_text">
+              <h3 className="dresscode_header">20 maj (bröllop):</h3>
+              Mediterranean formal <br></br>
+              Med detta menas följande, tänk en finare fest i
+              medelhavsomgivning: <br></br>
+              <br></br>
+              <span className="dresscode_header">Herrar:</span> Kostym i valfri
+              färg, och valfritt material, t.ex. linne eller bomull. Slips/fluga
+              är valfritt för den som önskar. Kostymskor eller loafers.{" "}
+              <br></br>
+              <span className="dresscode_header">Damer:</span> Hel- eller
+              vadlång klänning eller byxdräkt, gärna i finare material och i
+              valfri färg (vi uppmuntrar färgglatt!). <br></br>
+              <br></br>Inspiration för den som önskar finns här:
+              https://pin.it/3BGbfBN <br></br>
+            </div>
+            <div className="p-2" id="flight_text">
+              <h3 className="dresscode_header">
+                21 maj (grillning och poolparty):
+              </h3>
+              Pool party chic <br></br>
+              Inspiration för den som önskar finns här: https://pin.it/4p6yi5q{" "}
+              <br></br>
+              Ta med/ha på dig badkläder!
             </div>
           </div>
         </div>
       </section>
+
+      <img src={dresscode} className="img-fluid" />
+
+      <section id="information">
+        <h1 id="information_header">Övrig information</h1>
+        <div
+          className="h-100 w-100 d-flex align-items-center justify-content-center"
+          id="information_inner"
+        >
+          <div className="d-flex flex-column">
+            <div className="p-2" id="flight_text">
+              <h3 className="dresscode_header">Tal</h3>
+              Vill du hålla tal, ge sina lyckönskningar eller framföra något
+              under bröllopet? Vad roligt! Anmäl detta till vårt toastpar,
+              Katarina Roa och Wictor Björklund, genom att maila MAIL.
+            </div>
+
+            <div className="p-2" id="flight_text">
+              <h3 className="dresscode_header">Barn</h3>
+              Vi önskar fira vår bröllopshelg med endast vuxna. Ammande barn är
+              dock självklart välkomna.
+            </div>
+            <div className="p-2" id="flight_text">
+              <h3 className="dresscode_header">Mobilfri vigsel</h3>
+              Vi vill be er att inte använda era mobiler eller fotografera/filma
+              under vår vigsel. Efter vigseln är det dock fritt fram att fota
+              och filma! Vi vill ha så många minnen som möjligt kvar efter
+              helgen, så dela gärna era filmer och foton med oss efter
+              bröllopet.
+            </div>
+            <div className="p-2" id="flight_text">
+              <h3 className="dresscode_header">Presenter</h3>
+              Allt vi önskar är att få fira med alla er nära och kära. Om ni
+              ändå vill uppmärksamma oss med en gåva, blir vi glada för ett
+              bidrag till vår bröllopsresa.
+              <br></br> <br></br>
+              Bidrag till bröllopsresan skickas med fördel genom Swish till Iara
+              Laxèn (brudtärna) på 070-358 57 28, märkt med namn och
+              “bröllopspresent”. Brudparet kommer därefter att få summan
+              överförd som klumpsumma.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <img src={otherinfo} className="img-fluid" />
+
       <section id="register">
-        <div id="btn_container">
-          <h2 className="button_heading" id="wedding_text">
-            Mina & Juan-Pablos bröllop
-          </h2>
+        <h1 id="our_story_header">Mina & Juan-Pablos Bröllop</h1>
+        <div
+          className="h-100 w-100 d-flex align-items-center justify-content-center"
+          id="register_inner"
+        >
+          <div className="our_story_text" id="flight_text">
           <Link to="/OSA">
             <button type="button" id="btn">
               OSA
             </button>
           </Link>
+          </div>
         </div>
       </section>
+
+      
+
+      <img src={rsvp} className="img-fluid" />
     </>
   );
 }
