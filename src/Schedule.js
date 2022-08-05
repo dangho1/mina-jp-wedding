@@ -4,8 +4,7 @@ import { useState } from "react";
 function Schedule() {
   return (
     <>
-    <section className="hero">
-        
+      <section className="hero">
         <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="#"></a>
           <button
@@ -30,19 +29,46 @@ function Schedule() {
               <a class="nav-item nav-link" href="/#details">
                 Details
               </a>
-              <a class="nav-item nav-link" href="#">
-                RSVP
+              <a class="nav-item nav-link" href="/OSA">
+                OSA
+              </a>
+              <a class="nav-item nav-link" href="/schedule">
+                Schedule
               </a>
             </div>
           </div>
         </nav>
         <div className="header-content">
           <h1 className="heading">Mina & Juan Pablo</h1>
-      </div>
-    </section>
-    <section className="schedule-page">
-
-    </section>
+        </div>
+      </section>
+      <section className="schedule-page">
+      
+        <div className="container">
+        <div id="tmp-schedule">Kommer inom kort</div>
+      {/*
+          <div className="row">
+            
+            <div className="col">
+              
+              <h3>19 Maj</h3>
+              Salam
+            </div>
+            <div className="col">
+              <h3>20 Maj</h3>
+              Aleikum 
+            </div>
+            <div className="col">
+              <h3>21 Maj</h3>
+              Wa rahmatullah
+            </div>
+            
+            
+          </div>
+  */}
+        </div>
+        
+      </section>
     </>
   );
 }

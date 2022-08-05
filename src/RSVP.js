@@ -9,9 +9,11 @@ function RSVP() {
   const [firstName, setFirstName] = useState("");
   const [surName, setSurName] = useState("");
   const [email, setEmail] = useState("");
+  const [phoneNum, setPhoneNum] = useState("");
   const [song, setSong] = useState("");
   const [allergies, setAllergies] = useState("");
   const [needAccomodation, setNeedAccomodation] = useState("");
+  const [welcomeCocktail, setWelcomeCocktail] = useState("");
   const [needTransportWeddingDay, setNeedTransportWeddingDay] = useState("");
   const [needTransportPoolParty, setNeedTransportPoolParty] = useState("");
   const [passCode, setPassCode] = useState("");
@@ -28,10 +30,14 @@ function RSVP() {
       return;
     }
     if (surName == "") {
-      alert("Fältet för efternamn är tomt");
+      alert("Fältet för mobilnummer är tomt");
       return;
     }
     if (email == "") {
+      alert("Fältet för email är tomt");
+      return;
+    }
+    if (phoneNum == "") {
       alert("Fältet för email är tomt");
       return;
     }
@@ -41,7 +47,12 @@ function RSVP() {
     }
 
     if(needAccomodation == "") {
-      alert("Fyll i om du vill ha boende mellan 20-21 maj")
+      alert("Fyll i om du vill ha boende mellan 20-21 Maj")
+      return;
+    }
+
+    if(welcomeCocktail == "") {
+      alert("Fyll i om du deltar på välkomstcocktail 19 Maj")
       return;
     }
 
@@ -75,10 +86,12 @@ function RSVP() {
     await sheet.addRow({
       Förnamn: firstName,
       Efternamn: surName,
-      email: email,
-      song: song,
-      allergies: allergies,
+      Email: email,
+      Mobilnummer: phoneNum,
+      Låt: song,
+      Allergier: allergies,
       needAccomodation: needAccomodation,
+      welcomeCocktail: welcomeCocktail,
       needTransportWeddingDay: needTransportWeddingDay,
       needTransportPoolParty: needTransportPoolParty
     });
@@ -114,6 +127,9 @@ function RSVP() {
               </a>
               <a class="nav-item nav-link" href="#">
                 OSA
+              </a>
+              <a class="nav-item nav-link" href="/schedule">
+                Schedule
               </a>
             </div>
           </div>
@@ -161,6 +177,18 @@ function RSVP() {
           />
         </div>
         <div class="form-group">
+          <label for="phonenum">Mobilnummer</label>
+          <input
+            required="required"
+            type="text"
+            class="form-control"
+            id="phoneNum"
+            placeholder="Mobilnummer"
+            value={phoneNum}
+            onChange={(e) => setPhoneNum(e.target.value)}
+          />
+        </div>
+        <div class="form-group">
           <label for="song">Låt du vill höra på dansgolvet</label>
           <input
             type="text"
@@ -201,6 +229,32 @@ function RSVP() {
             name="flexRadioDefault"
             id="flexRadioDefault2"
             onChange={(e) => setNeedAccomodation("No")}
+          />
+          <label class="form-check-label" for="flexRadioDefault2">
+            Nej
+          </label>
+        </div>
+
+        <label>Jag deltar på välkomstcocktail 19 Maj</label>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+            onChange={(e) => setWelcomeCocktail("Yes")}
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            Ja
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            onChange={(e) => setWelcomeCocktail("No")}
           />
           <label class="form-check-label" for="flexRadioDefault2">
             Nej
@@ -272,7 +326,7 @@ function RSVP() {
           />
           <small>Står på inbjudan :)</small>
         </div>
-        <button type="submit" class="btn btn-primary" onClick={checkRSVP}>
+        <button type="submit" class="btn btn-primary" id="submit_rsvp" onClick={checkRSVP}>
           Anmäl
         </button>
       </form>

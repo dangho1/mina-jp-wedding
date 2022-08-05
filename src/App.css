@@ -247,5 +247,34 @@ height: 26em;
   margin-top: 5px !important;
 }
 
+#submit_rsvp {
+  background-color: rgb(255, 142, 161);
+  border-color: black;
+  margin-bottom: 30px;
+}
 
+.schedule-page {
+  background-color: rgb(247,233,232);
+  height: 500px; /*remove ltr*/
+}
 
+.schedule-page h3 {
+  margin-top: 30px;
+}
+
+#tmp-schedule {
+  position: absolute;
+  font-style: italic;
+  font-size: large;
+left: 50%;
+transform: translate(-50%);
+margin-top: 100px;
+}
+
+#flight_info {
+  background-color: rgb(247,233,232);
+}
+
+.full_width_img {
+  width: 100%;
+}

@@ -1,29 +1,8 @@
 import { Link } from "react-router-dom";
 import { Carousel } from "react-carousel-minimal";
+import our_story from './assets/our_story.jpg';
 
 export default function Main() {
-  const images = [
-    {
-      image: "https://picsum.photos/id/1018/1000/600/",
-    },
-    {
-      image: "https://picsum.photos/id/1015/1000/600/",
-      thumbnail: "https://picsum.photos/id/1015/250/150/",
-    },
-    {
-      image: "https://picsum.photos/id/1019/1000/600/",
-      thumbnail: "https://picsum.photos/id/1019/250/150/",
-    },
-  ];
-
-  const captionStyle = {
-    fontSize: "2em",
-    fontWeight: "bold",
-  };
-  const slideNumberStyle = {
-    fontSize: "20px",
-    fontWeight: "bold",
-  };
 
   return (
     <>
@@ -55,6 +34,9 @@ export default function Main() {
               <a class="nav-item nav-link" href="/OSA">
                 OSA
               </a>
+              <a class="nav-item nav-link" href="/schedule">
+                Schedule
+              </a>
             </div>
           </div>
         </nav>
@@ -72,30 +54,9 @@ export default function Main() {
           </div>
         </div>
       </section>
-      <Carousel
-        data={images}
-        time={2000}
-        width="100%"
-        height="500px"
-        captionStyle={captionStyle}
-        radius="10px"
-        slideNumber={true}
-        slideNumberStyle={slideNumberStyle}
-        captionPosition="bottom"
-        automatic={true}
-        dots={true}
-        pauseIconColor="white"
-        pauseIconSize="40px"
-        slideBackgroundColor="darkgrey"
-        slideImageFit="cover"
-        thumbnails={false}
-        thumbnailWidth="100px"
-        style={{
-          textAlign: "center",
-          maxWidth: "100%",
-          maxHeight: "500px",
-        }}
-      />
+
+      <img src={our_story} className="full_width_img"/>
+
       <section id="details">
         <div className="container">
           <div className="row">
@@ -128,11 +89,20 @@ export default function Main() {
           </div>
           <div className="row">
             <div className="col">
-                <Link to="/">
+                <Link to="/schedule">
                   <button type="button" id="btn" className="schedule_btn">
                     Schema
                   </button>
                 </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="flight_info">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              Flyg och boende...
             </div>
           </div>
         </div>
