@@ -1,5 +1,36 @@
+*{
+  padding: 0;
+  margin: 0;
+
+  
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /*
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;*/
+}
+
 .App {
   text-align: center;
+
+}
+
+.RSVP-page {
+  background-color: rgb(247,233,232);
+}
+
+nav {
+  top: 2%;
+  left: 2%;
+  position: absolute !important;
+  font-weight: bold;
+  
 }
 
 .App-logo {
@@ -35,4 +66,301 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.main_header {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  /*padding: 1em; */
+  margin-bottom: 2em;
+  background-color: rgb(91, 190, 194);
+  color: #fff;
+}
+
+
+.heading {
+  line-height: normal;
+  text-align: center;
+  font-size: 27px;
+  font: normal normal normal 27px/1.4em brandon-grot-w01-light,brandon-grot-w05-light,sans-serif;
+  letter-spacing: 1.25em;
+  color:rgb(47, 46, 46);
+}
+
+
+.hero {
+  /* Sizing */
+  width: 100vw;
+  height: 100vh;
+  
+  /* Flexbox stuff */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Text styles */
+  text-align: center;
+  color: white;
+  
+  /* Background styles */
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5), url('hero.jpg'));*/
+  background-image: url('./assets/hero.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#our_story {
+  background-color: rgb(247,233,232);
+  height: 500px;
+  font-size: 20px;
+  line-height: 2em;
+  display: flex;
+  /*font: normal normal normal 20px/1.4em didot-w01-italic,didot-w05-italic,serif; */
+  font-family: "didot", "serif";
+  color: rgb(47,46,46);
+  
+
+
+}
+
+#our_story_inner {
+  margin-bottom: 40px;
+  margin-top: 50px;
+}
+
+
+#details {
+  background-color: rgb(247,233,232);
+  font-size: 20px;
+  line-height: 2em;
+  display: flex;
+  /*font: normal normal normal 20px/1.4em didot-w01-italic,didot-w05-italic,serif; */
+  font-family: "didot", "serif";
+  color: rgb(47,46,46);
+}
+.wedding_text {
+  font-size: 27px;
+  letter-spacing: 20px;
+  
+  position: relative;
+  margin-top: 50px;
+  color: rgb(47,46,46);
+  font-family: brandon-grot-w01-light,sans-serif;
+  font: normal normal normal 27px/1.4em brandon-grot-w01-light,brandon-grot-w05-light,sans-serif;
+}
+
+#wedding_text {
+  font-size: 20px;
+  letter-spacing: 13px;
+  text-align: justify;
+  
+  position: relative;
+  margin-top: 50px;
+  color: rgb(47,46,46);
+  font-family: brandon-grot-w01-light,sans-serif;
+  font: normal normal normal 27px/1.4em brandon-grot-w01-light,brandon-grot-w05-light,sans-serif;
+}
+
+#wedding_info_upper {
+  margin-top: 50px;
+}
+
+
+
+
+
+.wedding_info_text {
+  font-size: 20px;
+  line-height: 2em;
+  display: flex;
+  font: normal normal normal 20px/1.4em didot-w01-italic,didot-w05-italic,serif;
+  color: rgb(47,46,46);
+}
+
+#when {
+  margin-bottom: 1em;
+  font-weight: bold;
+  
+}
+
+#where {
+  margin-top: 60px;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+#register {
+  background-color: rgb(247,233,232);
+  font-size: 20px;
+  line-height: 2em;
+  display: flex;
+  /*font: normal normal normal 20px/1.4em didot-w01-italic,didot-w05-italic,serif; */
+  font-family: "didot", "serif";
+  color: rgb(47,46,46);
+}
+
+#btn_container {
+  margin-top: 4em;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#btn {
+  outline: 0;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+    cursor: pointer;
+    border-style: solid;
+    padding: 10px 30px;
+    width: 160px;
+    overflow: hidden;
+    white-space: nowrap;
+    font: normal normal normal 20px/1.4em didot-w01-italic,didot-w05-italic,serif;
+    color: rgb(47, 46, 46);
+    background: rgb(255, 255, 255);
+    border-radius: 0;
+    border: 0;
+    margin-top: 2em;
+}
+
+#our_story_header {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 40px;
+
+}
+
+.our_story_text {
+  max-width: 500px;
+}
+
+.flex-column{
+  max-width: 500px !important; 
+}
+
+@media screen and (max-width: 768px) {
+  .our_story_text {
+    max-width: 300px;
+  }
+
+  .flex-column{
+    max-width: 300px !important; 
+  }
+}
+
+.form > * {
+  margin-left: 20px;
+  margin-top: 30px;
+  margin-right: 20px;
+  font-family: brandon-grot-w01-light,sans-serif;
+  font: normal normal normal 20px/1.4em brandon-grot
+}
+
+.form-check-label {
+  margin-top: 5px !important;
+}
+
+#submit_rsvp {
+  background-color: rgb(255, 142, 161);
+  border-color: black;
+  margin-bottom: 30px;
+}
+
+.schedule-page {
+  background-color: rgb(247,233,232);
+  height: 500px; /*remove ltr*/
+}
+
+.schedule-page h3 {
+  margin-top: 30px;
+}
+
+#tmp-schedule {
+  position: absolute;
+  font-style: italic;
+  font-size: large;
+left: 50%;
+transform: translate(-50%);
+margin-top: 100px;
+}
+
+#flight_info {
+  background-color: rgb(247,233,232);
+  font-size: 20px;
+  line-height: 2em;
+  display: flex;
+  /*font: normal normal normal 20px/1.4em didot-w01-italic,didot-w05-italic,serif; */
+  font-family: "didot", "serif";
+  color: rgb(47,46,46);
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+#flight_text {
+  margin-top: 60px;
+}
+
+#dresscodes {
+  background-color: rgb(247,233,232);
+  font-size: 20px;
+  line-height: 2em;
+  display: flex;
+  /*font: normal normal normal 20px/1.4em didot-w01-italic,didot-w05-italic,serif; */
+  font-family: "didot", "serif";
+  color: rgb(47,46,46);
+}
+
+#dresscode_text_first {
+  margin-top: 60px;
+}
+
+#dresscode_text {
+  margin-top: 60px;
+}
+
+.dresscode_header {
+  font-weight: 600;
+}
+
+#information {
+  background-color: rgb(247,233,232);
+  font-size: 20px;
+  line-height: 2em;
+  display: flex;
+  /*font: normal normal normal 20px/1.4em didot-w01-italic,didot-w05-italic,serif; */
+  font-family: "didot", "serif";
+  color: rgb(47,46,46);
+}
+
+#information_header {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 40px;
+}
+
+#information_inner {
+
+    margin-bottom: 60px;
+    margin-top: 100px;
+  
+}
+
+#details_inner {
+  margin-bottom: 50px;
+}
+
+#register_inner {
+  margin-bottom: 70px;
+  margin-top: 50px;
 }
